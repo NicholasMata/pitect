@@ -1,6 +1,11 @@
 # pitect
 
-NodeJS module used for detecting Raspberry Pi.
+NodeJS module used for detecting if node project is running on a Raspberry Pi.
+
+## Features
+
+- Detect if node project is running on a Raspberry Pi.
+- Detect the specific raspberry pi model.
 
 ## Install
 
