@@ -1,7 +1,7 @@
 # pitect [![travis][travis-image]][travis-url] [![npm][npm-image]][npm-url] [![downloads][downloads-image]][downloads-url]
 
-[travis-image]: https://img.shields.io/travis/feross/pitect/master.svg
-[travis-url]: https://travis-ci.org/feross/pitect
+[travis-image]: https://img.shields.io/travis/nicholasmata/pitect/master.svg
+[travis-url]: https://travis-ci.org/nicholasmata/pitect
 [npm-image]: https://img.shields.io/npm/v/pitect.svg
 [npm-url]: https://npmjs.org/package/pitect
 [downloads-image]: https://img.shields.io/npm/dm/pitect.svg
