@@ -37,7 +37,7 @@ function getModel(revision) {
 }
 
 exports.isPi = function () {
-  return getModel(revision) != exports.MODELS.Unknown;
+  return exports.piModel() != exports.MODELS.Unknown;
 }
 
 exports.piModel = function () {
