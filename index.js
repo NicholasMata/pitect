@@ -35,7 +35,7 @@ function getModel(revision) {
     // sz will be the names of the objects in SIZE, so
     // 'SMALL', 'MEDIUM', 'LARGE', 'EXTRALARGE'
     var model = exports.MODELS[modelname]; // Get the object mapped to the name in sz
-    if((model.revisions != null) && model.revisions.filter(function(item) { return item == revision; }))
+    if((model.revisions != null) && model.revisions.filter(function(item) { return item == revision; }.length > 0))
       return model;
   }
   return exports.MODELS.Unknown;
