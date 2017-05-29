@@ -25,15 +25,15 @@ function getCpuInfo(property) {
 }
 
 function getModel(revision) {
-  for (var modelname in exports.PIMODEL) {
+  for (var modelname in exports.MODELS) {
     // sz will be the names of the objects in SIZE, so
     // 'SMALL', 'MEDIUM', 'LARGE', 'EXTRALARGE'
-    var model = exports.PIMODEL[modelname]; // Get the object mapped to the name in sz
+    var model = exports.MODELS[modelname]; // Get the object mapped to the name in sz
     for (var modelRev in model.revisions) {
         if (modelRev == revision) return model;
     }
   }
-  return exports.PIMODEL.Unknown;
+  return exports.MODELS.Unknown;
 }
 
 exports.isPi = function () {
@@ -42,7 +42,7 @@ exports.isPi = function () {
 
 exports.piModel = function () {
   var revision = getCpuInfo('Revision');
-  if (revision == null) return exports.PIMODEL.Unknown;
+  if (revision == null) return exports.MODELS.Unknown;
   return getModel(revision);
 }
 
