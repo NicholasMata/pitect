@@ -6,11 +6,8 @@ function getCpuInfo(property) {
     cpuInfo = fs.readFileSync('/proc/cpuinfo', { encoding: 'utf8' });
   } catch (e) {
     // if this fails, this is probably not a pi
-    console.log('No file /proc/cpuinfo');
     return null;
   }
-
-  console.log(cpuInfo);
 
   var propertyInfo = cpuInfo
     .split('\n')
@@ -23,9 +20,6 @@ function getCpuInfo(property) {
   if (!propertyInfo || propertyInfo.length == 0) {
     return null;
   }
-  console.log('Property Info');
-  console.log(propertyInfo);
-  console.log('Property = '+ propertyInfo[0][1]);
 
   return propertyInfo[0][1];
 }
