@@ -1,4 +1,6 @@
-# pitect
+# pitect [npm-url]
+
+[npm-url]: https://npmjs.org/package/pitect
 
 NodeJS module used for detecting if node project is running on a Raspberry Pi.
 
