@@ -12,7 +12,7 @@ function getCpuInfo(property) {
 
   console.log(cpuInfo);
 
-  var propertyString = cpuInfo
+  var propertyInfo = cpuInfo
     .split('\n')
     .map(line => line.replace(/\t/g, ''))
     .filter(line => line.length > 0)
@@ -20,11 +20,14 @@ function getCpuInfo(property) {
     .map(pair => pair.map(entry => entry.trim()))
     .filter(pair => pair[0] === property)
 
-  if (!propertyString || propertyString.length == 0) {
+  if (!propertyInfo || propertyInfo.length == 0) {
     return null;
   }
-
-  return propertyString[0][1];
+  console.log('Property Info');
+  console.log(propertyInfo);
+  console.log('Property = '+ propertyInfo[0][1]);
+  
+  return propertyInfo[0][1];
 }
 
 function getModel(revision) {
