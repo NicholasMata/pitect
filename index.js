@@ -26,7 +26,7 @@ function getCpuInfo(property) {
   console.log('Property Info');
   console.log(propertyInfo);
   console.log('Property = '+ propertyInfo[0][1]);
-  
+
   return propertyInfo[0][1];
 }
 
@@ -35,9 +35,8 @@ function getModel(revision) {
     // sz will be the names of the objects in SIZE, so
     // 'SMALL', 'MEDIUM', 'LARGE', 'EXTRALARGE'
     var model = exports.MODELS[modelname]; // Get the object mapped to the name in sz
-    for (var modelRev in model.revisions) {
-        if (modelRev == revision) return model;
-    }
+    if((model.revisions != null) && model.revisions.filter(function(item) { return item == revision; }))
+      return model;
   }
   return exports.MODELS.Unknown;
 }
