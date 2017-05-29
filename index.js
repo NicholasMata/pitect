@@ -37,9 +37,7 @@ function getModel(revision) {
 }
 
 exports.isPi = function () {
-  var revision = getCpuInfo('Revision');
-  if (revision == null) return false;
-  return PI_REVISION_NO.indexOf(model) > -1;
+  return getModel(revision) != exports.MODELS.Unknown;
 }
 
 exports.piModel = function () {
