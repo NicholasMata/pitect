@@ -4,7 +4,7 @@
   "description": "Detects if node is currently running on a Raspberry Pi.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/mocha --reporter spec tests/*.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,9 @@
     "pi detection"
   ],
   "author": "Nicholas Mata",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.0.0",
+    "mocha": "^3.4.2"
+  }
 }
