@@ -1,4 +1,11 @@
-# pitect
+# pitect [![travis][travis-image]][travis-url] [![npm][npm-image]][npm-url] [![downloads][downloads-image]][downloads-url]
+
+[travis-image]: https://img.shields.io/travis/feross/pitect/master.svg
+[travis-url]: https://travis-ci.org/feross/pitect
+[npm-image]: https://img.shields.io/npm/v/pitect.svg
+[npm-url]: https://npmjs.org/package/pitect
+[downloads-image]: https://img.shields.io/npm/dm/pitect.svg
+[downloads-url]: https://npmjs.org/package/pitect
 
 NodeJS module used for detecting if node project is running on a Raspberry Pi.
 
