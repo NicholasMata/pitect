@@ -35,6 +35,12 @@ function getModel(revision) {
   return exports.MODELS.Unknown;
 }
 
+exports.serialNumber = {
+  get() {
+    return getCpuInfo('Serial');
+  }
+}
+
 exports.isPi = function () {
   return exports.piModel() != exports.MODELS.Unknown;
 }
