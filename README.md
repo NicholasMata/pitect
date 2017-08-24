@@ -26,6 +26,7 @@ const pitect = require('pitect');
 if(pitect.isPi()) {
     console.log('This is a Raspberry Pi.');
     console.log('This is: ' + pitect.piModel().name);
+    console.log('Raspberry Pi Serial Number: ' + pitect.serialNumber());
     if (pitect.piModel() == pitect.MODELS.PI_A) {
         console.log('This is a Raspberry PI Model A');
     }
