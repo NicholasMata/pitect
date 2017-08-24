@@ -116,7 +116,7 @@ exports.MODELS = {
   //////////
 
   // PI 2 Model B V1.1
-  PI_2_B_V12: {
+  PI_2_B_V11: {
     revisions: [
       'a01041', // (Sony, UK)
       'a21041' // (Embest, China)
