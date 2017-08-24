@@ -20,7 +20,7 @@ function getCpuInfo(property) {
   if (!propertyInfo || propertyInfo.length == 0) {
     return null;
   }
-
+ 
   return propertyInfo[0][1];
 }
 
@@ -35,10 +35,9 @@ function getModel(revision) {
   return exports.MODELS.Unknown;
 }
 
-exports.serialNumber = {
-  get() {
+exports.serialNumber = function() {
+    // Gets in the serial 
     return getCpuInfo('Serial');
-  }
 }
 
 exports.isPi = function () {
