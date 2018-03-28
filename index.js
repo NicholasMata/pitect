@@ -50,6 +50,9 @@ exports.piModel = function () {
   return getModel(revision);
 }
 
+// Models based off documentation found below
+// https://www.raspberrypi.org/documentation/hardware/raspberrypi/revision-codes/README.md
+
 exports.MODELS = {
   Unknown: {
     name: 'Unknown'
