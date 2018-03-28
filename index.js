@@ -168,5 +168,18 @@ exports.MODELS = {
       'a22082' // (Embest, China)
     ],
     name: 'PI 3 Model B'
+  },
+  
+  //////////
+  // PI 3B+ //
+  //////////
+
+  // PI 3 Model B+
+  PI_3_Bplus: {
+    revisions: [
+      'a020d3' // (Sony, UK)
+
+    ],
+    name: 'PI 3 Model B+'
   }
 }
