@@ -150,13 +150,16 @@ function getModel(revision) {
     }
     return exports.MODELS.Unknown;
 }
-exports.serialNumber = function () {
+function serialNumber() {
     return getCPUInfo('Serial');
-};
-exports.isPi = function () {
+}
+exports.serialNumber = serialNumber;
+function isPi() {
     return exports.piModel() != exports.MODELS.Unknown;
-};
-exports.piModel = function () {
+}
+exports.isPi = isPi;
+function piModel() {
     var revision = getCPUInfo('Revision');
     return revision == null ? exports.MODELS.Unknown : getModel(revision);
-};
+}
+exports.piModel = piModel;
