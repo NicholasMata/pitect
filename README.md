@@ -12,7 +12,8 @@ NodeJS module used for detecting if node project is running on a Raspberry Pi.
 ## Features
 
 - Detect if node project is running on a Raspberry Pi.
-- Detect the specific raspberry pi model.
+- Detect the specific Raspberry Pi model.
+- Get the serial number of a Raspberry Pi
 
 ## Install
 
@@ -20,8 +21,25 @@ NodeJS module used for detecting if node project is running on a Raspberry Pi.
 
 ## Usage
 
+### Javascript
+
 ```js
 const pitect = require('pitect');
+
+if(pitect.isPi()) {
+    console.log('This is a Raspberry Pi.');
+    console.log('This is: ' + pitect.piModel().name);
+    console.log('Raspberry Pi Serial Number: ' + pitect.serialNumber());
+    if (pitect.piModel() == pitect.MODELS.PI_A) {
+        console.log('This is a Raspberry PI Model A');
+    }
+}
+```
+
+### Typescript
+
+```typescript
+import * as pitect from 'pitect';
 
 if(pitect.isPi()) {
     console.log('This is a Raspberry Pi.');
