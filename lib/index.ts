@@ -169,15 +169,15 @@ function getModel(revision: string) {
     return MODELS.Unknown;
 }
 
-exports.serialNumber = function () {
+export function serialNumber(): string | null {
     return getCPUInfo('Serial');
 }
 
-exports.isPi = function () {
+export function isPi(): boolean {
     return exports.piModel() != MODELS.Unknown;
 }
 
-exports.piModel = function () {
+export function piModel(): IModel {
     const revision = getCPUInfo('Revision');
     return revision == null ? MODELS.Unknown : getModel(revision);
 }
